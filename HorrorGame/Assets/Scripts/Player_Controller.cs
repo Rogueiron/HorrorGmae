@@ -20,6 +20,10 @@ public class Player_Controller : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = 10.0f;
+        }
 
 
     }
